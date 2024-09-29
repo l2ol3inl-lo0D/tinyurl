@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: @project.artifactId@
+  profiles:
+    active: "dev"
+    default: "none"
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/tinydb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driverClassName: org.postgresql.Driver
+
+application:
+  base-url: tinyurl.ca

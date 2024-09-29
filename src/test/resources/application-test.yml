@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    platform: org.hibernate.dialect.H2Dialect
+    url: jdbc:h2:mem:tinydb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+application:
+  base-url: tinyurl.ca
