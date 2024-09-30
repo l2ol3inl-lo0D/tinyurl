@@ -26,7 +26,7 @@ public class TinyUrlService {
         if(!urlValidator.validateGeneratedUrl(url)) {
             throw new ApplicationException("Invalid Generated Url: " + url);
         }
-        log.info("Finding Url: " + url);
+        log.info("Searching for Url: " + url);
         return tinyUrlRepository.findByGeneratedUrl(url).orElse(null);
     }
 
@@ -36,9 +36,12 @@ public class TinyUrlService {
         }
 
         String normalizedUrl = UrlHelper.normalizeUrl(url);
-        log.info("Normalized Url: " + normalizedUrl);
-
-        TinyUrl tinyUrl = tinyUrlRepository.findBySourceUrl(normalizedUrl).orElse(createTinyUrl(normalizedUrl));
+        log.info("Searching for normalized url: " + normalizedUrl);
+        TinyUrl tinyUrl = tinyUrlRepository.findBySourceUrl(normalizedUrl).orElse(null);
+        if(tinyUrl == null) {
+            log.info("Url not found, creating a new one for: " + normalizedUrl);
+            tinyUrl = createTinyUrl(normalizedUrl);
+        }
 
         return tinyUrl.getGeneratedUrl();
     }
@@ -46,7 +49,7 @@ public class TinyUrlService {
     private TinyUrl createTinyUrl(String normalizedUrl) {
         String generatedUrl = urlGenerator.generateUrl(normalizedUrl);
 
-        log.info("Generated Url: " + generatedUrl);
+        log.info("Generating new url: " + generatedUrl);
         return tinyUrlRepository.save(EntityFactory.createTinyUrl(normalizedUrl, generatedUrl));
     }
 

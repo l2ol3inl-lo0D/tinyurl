@@ -6,9 +6,9 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class EntityFactory {
 
-    public static TinyUrl createTinyUrl(String url, String generatedUrl) {
+    public static TinyUrl createTinyUrl(String sourceUrl, String generatedUrl) {
         return TinyUrl.builder()
-                .sourceUrl(url)
+                .sourceUrl(sourceUrl)
                 .generatedUrl(generatedUrl)
                 .build();
     }

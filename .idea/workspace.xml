@@ -5,34 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2a40ffb-0fe1-4719-bb98-c93c3d14a19a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/TinyUrlApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/controller/RequestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/exception/ApplicationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/generator/UrlGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/model/UrlDescriptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/model/entity/TinyUrl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/repository/TinyUrlRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/service/TinyUrlService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/utils/EntityFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/utils/UrlHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/validation/UrlValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/TinyUrlApplicationIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/controller/RequestControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/generator/UrlGeneratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/service/TinyUrlServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/utils/EntityFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/utils/UrlHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/validation/UrlValidatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/notarius/application/controller/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/controller/RequestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/notarius/application/generator/UrlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/generator/UrlGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/notarius/application/service/TinyUrlService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/service/TinyUrlService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/notarius/application/utils/EntityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/utils/EntityFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/notarius/application/utils/UrlHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/notarius/application/utils/UrlHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/notarius/application/TinyUrlApplicationIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/notarius/application/TinyUrlApplicationIntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +66,7 @@
       <recent name="com.notarius.application" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TinyUrlApplicationIntegrationTest">
+  <component name="RunManager" selected="Application.TinyUrlApplication">
     <configuration name="TinyUrlApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="DB_USERNAME" value="dbuser" />
@@ -204,9 +184,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TinyUrlApplication" />
         <item itemvalue="JUnit.TinyUrlApplicationIntegrationTest" />
         <item itemvalue="JUnit.UrlValidatorTest" />
-        <item itemvalue="Application.TinyUrlApplication" />
         <item itemvalue="JUnit.UrlGeneratorTest" />
         <item itemvalue="JUnit.UrlHelperTest.givenInvalidShortenUrls_whenIsGeneratedUrlValid_shouldReturnFalse" />
       </list>

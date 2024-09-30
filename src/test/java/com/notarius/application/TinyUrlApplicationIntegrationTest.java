@@ -34,7 +34,7 @@ public class TinyUrlApplicationIntegrationTest {
 
     @Test
     void givenUrl_whenShortenUrl_thenReturn200WithBody() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/shorten")
+        mockMvc.perform(MockMvcRequestBuilders.post("/shorten")
                         .param("url", "https://www.google.com/")
                         .contentType(MediaType.TEXT_PLAIN))
                 .andExpect(status().isOk())
@@ -48,8 +48,8 @@ public class TinyUrlApplicationIntegrationTest {
     void givenUrl_whenFindUrl_thenReturn200WithBody() throws Exception {
         tinyUrlRepository.save(EntityFactory.createTinyUrl("https://www.superurl.com/", "test123"));
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/")
-                        .param("url", "test123")
+        mockMvc.perform(MockMvcRequestBuilders.get("/find")
+                        .param("key", "test123")
                         .contentType(MediaType.TEXT_PLAIN))
                 .andExpect(status().isOk())
                 .andExpect(content()
@@ -58,15 +58,15 @@ public class TinyUrlApplicationIntegrationTest {
 
     @Test
     void givenUrl_whenDoesNotExist_shouldReturn404() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/")
-                        .param("url", "nourl")
+        mockMvc.perform(MockMvcRequestBuilders.get("/find")
+                        .param("key", "nourl")
                         .contentType(MediaType.TEXT_PLAIN))
                 .andExpect(status().isNotFound());
     }
 
     @Test
     void givenInvalidUrl_whenShortenUrl_shouldReturn400() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/shorten")
+        mockMvc.perform(MockMvcRequestBuilders.post("/shorten")
                         .param("url", "invalidurl")
                         .contentType(MediaType.TEXT_PLAIN))
                 .andExpect(status().isBadRequest()).andExpect(
@@ -75,8 +75,8 @@ public class TinyUrlApplicationIntegrationTest {
 
     @Test
     void givenEmptyUrl_whenFindUrl_shouldReturn400() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/")
-                        .param("url", "")
+        mockMvc.perform(MockMvcRequestBuilders.get("/find")
+                        .param("key", "")
                         .contentType(MediaType.TEXT_PLAIN))
                 .andExpect(status().isBadRequest())
                 .andExpect(content().string("Invalid Generated Url: "));

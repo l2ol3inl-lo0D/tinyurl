@@ -26,6 +26,12 @@ public class UrlHelper {
         return ALLOWED_CHARACTERS.matcher(url).find();
     }
 
+    /**
+     * Transform the url int a low case version with always http:// or https:// and www. at the beginning.
+     *
+     * @param url the url to be normalized
+     * @return the normalized url
+     */
     public static String normalizeUrl(String url) {
         String normalizedString = url.toLowerCase();
         if (!containsProtocol(normalizedString)) {
